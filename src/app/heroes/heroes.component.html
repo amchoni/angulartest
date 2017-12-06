@@ -1,0 +1,13 @@
+<p>
+  {{hero}}
+</p>
+<h1>{{heroObj.name | uppercase }}</h1>
+<div>
+  <label>Name of user:
+  <input type="text" [(ngModel)]="heroObj.name" placeholder="name" class="btn btn-default">
+</label>
+</div>
+<!-- <div class="heroes">
+  <div *ngFor="let hero of heroes">{{hero.name}}</div>
+</div> -->
+<app-hero-details *ngFor="let selectedHero of heroes" [hero] = "selectedHero" ></app-hero-details>
